@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="act_report_xml_view_pdfa">
+            <field name="model">ir.actions.report</field>
+            <field name="inherit_id" ref="base.act_report_xml_view"/>
+            <field name="arch" type="xml">
+                <!-- adds the PDF/A option to be set on each qweb-report -->
+                <field name="report_type" position="after">
+                    <field name="pdfa_option" attrs="{'invisible': [('report_type', '!=', 'qweb-pdf')]}"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
