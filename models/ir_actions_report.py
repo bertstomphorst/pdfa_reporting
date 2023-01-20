@@ -72,7 +72,7 @@ class IrActionsReport(models.Model):
 
     @staticmethod
     def run_ghostscript(pdf, pdfa_option):
-        _logger.info('execute with PDF/A-option: %s' % pdfa_option)
+        # _logger.info('execute with PDF/A-option: %s' % pdfa_option)
 
         if not pdfa_option or pdfa_option == 'no':
             return pdf
